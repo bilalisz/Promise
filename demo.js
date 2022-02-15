@@ -11,7 +11,7 @@ const handleClick = () => {
 };
 
 setTimeout(() => {
-  console.log(userData);
+  console.log(userData, "data");
 }, 5000);
 
 const getData = () => {
