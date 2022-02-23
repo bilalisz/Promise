@@ -1,5 +1,3 @@
-console.log("I am here");
-
 var userData = [];
 
 const handleClick = () => {
@@ -10,19 +8,24 @@ const handleClick = () => {
     .catch((e) => console.log(e.message));
 };
 
-setTimeout(() => {
-  console.log(userData, "data");
-}, 5000);
+// const getData = () => {
+//   const p = new Promise((res, rej) => {
+//     if (userData) {
+//       return res(userData);
+//     } else if (!userData) {
+//       return rej(new Error("data is not found"));
+//     }
+//   });
+//   return p
+//     .then((data) => console.log(data))
+//     .catch((e) => console.log(e.message));
+// };
 
-const getData = () => {
-  const p = new Promise((res, rej) => {
-    if (userData) {
-      return res(userData);
-    } else if (!userData) {
-      return rej(new Error("data is not found"));
-    }
-  });
-  return p
-    .then((data) => console.log(data))
-    .catch((e) => console.log(e.message));
-};
+const number = [1, 2, 3, 4, 5, 6];
+console.log(
+  number.reduce((accomolater, current) => {
+    console.log(accomolater, current);
+    let sum = accomolater + current;
+    return sum;
+  })
+);
